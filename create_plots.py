@@ -11,8 +11,6 @@ import shutil
 import gc
 import logging
 logging.getLogger("cfgrib").setLevel(logging.ERROR)
-import os
-os.environ["ECCODES_MESSAGES_QUIET"] = "1"
 import xarray as xr
 import cartopy.crs as ccrs
 
@@ -58,6 +56,3 @@ for i in range(360, 360, 10):
     gc.collect()
 
 plot_setup.animate("alaska", dir="group1")
-#plt.close(fig)
-
-#shutil.rmtree("/Users/avinasharavind/data")
